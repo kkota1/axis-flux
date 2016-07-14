@@ -1,0 +1,12 @@
+{
+  "name": "ng-node-flux",
+  "dependencies": {
+    "express": "^5.0.0-alpha.2",
+    "socket.io": "^1.4.4",
+    "lodash": "^4.13.1",
+    "bower": "^1.7.9"
+  },
+  "scripts": {
+    "postinstall": "bower install --config.cwd=./public --quiet"
+  }
+}

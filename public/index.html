@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <title>Seed App</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/socket.io-client/socket.io.js"></script>
+    <script src="js/app.js"></script>
+    <style>
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body ng-controller="appCtrl as vm" ng-init="vm.init()" class="ng-cloak container-fluid">
+    <ng-include src="'templates/body.html'"></ng-include>
+  </body>
+</html>
