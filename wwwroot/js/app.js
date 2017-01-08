@@ -1,18 +1,16 @@
 angular.module('app', [])
     .controller('appCtrl', ['$scope', function($scope) {
-        var store = {};
+        var vm = this;
 
         io().on('data', function(data){
-            angular.extend(store, data);
+            angular.extend(vm.store, data);
             $scope.$digest();
         });
 
-        angular.extend(this, {
+        angular.extend(vm, {
             dispatch: function(fn, args){
                 io().emit(fn, args);
             },
-            store: function(key){
-                return store[key];
-            }
+            store: {}
         });
     }]);
