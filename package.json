@@ -1,12 +1,19 @@
 {
-  "name": "ng-node-flux",
+  "name": "local-flux",
+  "version": "0.5.0",
+  "description": "Unidirectional Automation Environment",
   "dependencies": {
-    "express": "^5.0.0-alpha.2",
-    "socket.io": "^1.4.4",
-    "lodash": "^4.13.1",
-    "bower": "^1.7.9"
+    "express": "^4.14.0",
+    "socket.io": "^1.7.2",
+    "lodash": "^4.17.4"
   },
   "scripts": {
-    "postinstall": "bower install --config.cwd=./public --quiet"
-  }
+    "postinstall": "bower install --config.cwd=./wwwroot --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkota1/local-flux.git"
+  },
+  "author": "Kiran Kota",
+  "license": "MIT"
 }

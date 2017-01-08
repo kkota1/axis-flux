@@ -1,9 +1,0 @@
-{
-  "name": "ng-node-flux",
-  "dependencies": {
-    "angular": "~1.5.0",
-    "socket.io-client": "~1.4.8"
-  }
-}
-
-

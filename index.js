@@ -1,27 +1,14 @@
-var req = require,
-    express = req('express'),
-    app = express().use('/', express.static(__dirname + '/public')),
-    http = req('http').Server(app),
-    io = req('socket.io')(http),
-    _ = req('lodash');
+var express = require('express'),
+    app = express()
+        .use('/', express.static(__dirname + '/wwwroot'))
+        .use('/view.html', express.static(__dirname + '/src/view.html')),
+    http = require('http').Server(app),
+    io = require('socket.io')(http);
 
-io.on('connection', function(socket){
-    _.forOwn(exposed, function(fn, name){
-        socket.on(name, fn);
+io.on('connection', socket => {
+    require('lodash').forOwn(require("./src/actions.js"), (fn, name) => {
+        socket.on(name, args => io.emit('data', fn(args)));
     })
 });
 
-var emit = function(obj) {
-    io.emit('data', obj);
-}
-
-var exposed = {
-    test: function(args){
-        setTimeout(function(){
-            emit({'msg': 'got it'});
-        },2000)
-    }
-};
-
-
-http.listen(1337);
+http.listen(8000);

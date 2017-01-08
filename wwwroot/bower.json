@@ -1,0 +1,9 @@
+{
+  "name": "local-flux",
+  "dependencies": {
+    "angular": "~1.6.1",
+    "socket.io-client": "~1.7.2"
+  }
+}
+
+
