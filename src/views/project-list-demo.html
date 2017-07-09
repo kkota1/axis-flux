@@ -1,0 +1,8 @@
+Your name: <input type="text" ng-model="nameInput">
+
+<button ng-click="run('demo.listProjects').with(nameInput)">List my projects</button>
+
+<h2>{{store.greeting}}</h2>
+<ul>
+    <li ng-repeat="project in store.projectList">{{project}}</li>
+</ul>

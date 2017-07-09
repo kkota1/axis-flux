@@ -2,14 +2,18 @@ angular.module('app', [])
     .controller('appCtrl', ['$scope', function($scope) {
         var vm = this;
 
-        io().on('data', function(data){
-            angular.extend(vm.store, data);
+        io().on('toBeMerged', function(src){
+            angular.merge(vm.store, src);
             $scope.$digest();
         });
 
         angular.extend(vm, {
-            dispatch: function(fn, args){
-                io().emit(fn, args);
+            run: function(fn){
+                return {
+                    with: function(args){
+                        io().emit(fn, args);
+                    }
+                }
             },
             store: {}
         });

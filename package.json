@@ -1,18 +1,18 @@
 {
-  "name": "local-flux",
+  "name": "ean-automation",
   "version": "0.5.0",
-  "description": "Unidirectional Automation Environment",
-  "dependencies": {
-    "express": "^4.14.0",
-    "socket.io": "^1.7.2",
-    "lodash": "^4.17.4"
+  "description": "Customizable automation environment built with Express, Angular, and Node",
+    "dependencies": {
+    "express": "^4.15.2",
+    "glob": "^7.1.2",
+    "socket.io": "^1.7.4"
   },
   "scripts": {
     "postinstall": "bower install --config.cwd=./wwwroot --quiet"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kkota1/local-flux.git"
+    "url": "git+https://github.com/kkota1/ean-automation.git"
   },
   "author": "Kiran Kota",
   "license": "MIT"
