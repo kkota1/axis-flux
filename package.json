@@ -1,6 +1,6 @@
 {
-  "name": "ean-automation",
-  "version": "0.5.0",
+  "name": "axis-flux",
+  "version": "0.6.0",
   "description": "Customizable automation environment built with Express, Angular, and Node",
     "dependencies": {
     "express": "^4.15.2",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kkota1/ean-automation.git"
+    "url": "git+https://github.com/kkota1/axis-flux.git"
   },
   "author": "Kiran Kota",
   "license": "MIT"

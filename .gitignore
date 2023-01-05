@@ -1,3 +1,4 @@
 .idea
 node_modules
 wwwroot/bower_components
+package-lock.json
